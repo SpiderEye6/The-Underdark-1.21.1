@@ -28,9 +28,10 @@ public class TheUnderdark implements ModInitializer {
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.REINFORCED_DEEPSLATE)
 				.lightWithItem(Items.OMINOUS_TRIAL_KEY)
-				.destDimID(Identifier.of("the_end"))
+				.destDimID(Identifier.of("underdark:the_underdark"))
 				.tintColor(0,104,168)
 				.onlyLightInOverworld()
+                .setPortalSearchYRange(-10,120)
 				.forcedSize(20, 6)
 				.registerPortal();
 
