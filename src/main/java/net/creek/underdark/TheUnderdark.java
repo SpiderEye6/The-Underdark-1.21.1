@@ -1,5 +1,6 @@
 package net.creek.underdark;
 
+import net.creek.underdark.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -23,7 +24,7 @@ public class TheUnderdark implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		// Initializes Underdark Portal
+		// Initializes Underdark Portal.
 		CustomPortalBuilder.beginPortal()
 				.frameBlock(Blocks.REINFORCED_DEEPSLATE)
 				.lightWithItem(Items.OMINOUS_TRIAL_KEY)
@@ -32,5 +33,8 @@ public class TheUnderdark implements ModInitializer {
 				.onlyLightInOverworld()
 				.forcedSize(20, 6)
 				.registerPortal();
+
+		// Initializes Modded World Gen.
+		ModWorldGeneration.generateModWorldGen();
 	}
 }
