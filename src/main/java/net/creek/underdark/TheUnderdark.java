@@ -31,6 +31,7 @@ public class TheUnderdark implements ModInitializer {
 				.destDimID(Identifier.of("underdark:the_underdark"))
 				.tintColor(0,104,168)
 				.onlyLightInOverworld()
+                .setPortalSearchYRange(-10,120)
 				.forcedSize(20, 6)
 				.registerPortal();
 
